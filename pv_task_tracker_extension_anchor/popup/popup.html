@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Task Tracker</title>
+  <style>
+    body { font-family: sans-serif; width: 320px; padding: 10px; }
+    select, input, button { width: 100%; margin: 5px 0; box-sizing: border-box; }
+    .summary { margin-top: 15px; font-size: 0.9em; }
+    #timerDisplay { font-size: 2em; text-align: center; margin: 10px 0; }
+    .meta-inputs { display: flex; gap: 5px; }
+    .meta-inputs input { flex: 1; }
+  </style>
+</head>
+<body>
+  <h3>Project</h3>
+  <select id="projectSelect"></select>
+  <div class="meta-inputs">
+    <input type="text" id="newProjectInput" placeholder="New project name">
+  </div>
+  <div class="meta-inputs">
+    <input type="number" id="newProjectRuntimeInput" placeholder="Total runtime (min)">
+    <input type="number" id="newProjectBoxesInput" placeholder="Box count">
+  </div>
+  <button id="addProjectBtn">Add Project</button>
+
+  <h3>Task</h3>
+  <select id="taskSelect"></select>
+  <input type="text" id="newTaskInput" placeholder="New task name">
+  <button id="addTaskBtn">Add Task</button>
+
+  <div id="timerDisplay">00:00:00</div>
+  <button id="startBtn">▶ Start</button>
+  <button id="stopBtn">⏸ Stop</button>
+
+  <div class="summary" id="summaryOutput"></div>
+  <button id="exportBtn">⬇ Export CSV</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
